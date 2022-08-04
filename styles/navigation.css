@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul.mynav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  list-style-type: none;
+  margin-top: 70px;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  font-size: 28px;
+  color: rgba(122, 50, 139, 0.7);
+  font-family: "SFMono-Regular";
+  }
+ul.mynav li a{
+  text-decoration: none;
+  color: rgba(122, 50, 139, 0.7);
+  }
+  ul.mynav li a:hover:not(.active) {
+    background-color: rgba(138, 57, 158, 0.2);
+    color: rgb(0, 0, 0);
+}
+ul.mynav li a.active {
+    background-color: rgba(138, 57, 158, 0.6);
+    color: aliceblue;
+}
+ul.mynav li.right {
+    float: right;
+}

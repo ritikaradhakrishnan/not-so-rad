@@ -1,0 +1,40 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;              /* for the page to take full window height */
+    box-sizing: border-box;
+}
+
+div.blogsection {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  margin: 30px 60px;
+  padding: 10px 10px;
+}
+
+div.blogsection .eachblog{
+    margin: 40px 10px 40px 10px;
+    font-size: 19px;
+    font-family:  "SFMono-Regular";
+}
+
+div.blogsection .eachblog a{
+    color: rgb(6, 6, 6);
+    text-decoration: none;
+}
+div.blogsection .eachblog a:hover{
+    color: rgb(6, 6, 6);
+    text-decoration: underline;
+    font-size: 19.2px;
+}
+div.blogsection .eachblog a:active{
+    color: rgba(122, 50, 139, 0.7);
+    font-size: 19.2px;
+}
+
+
+div.blogsection .eachblog p{
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+}
