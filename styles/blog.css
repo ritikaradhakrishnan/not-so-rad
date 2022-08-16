@@ -18,6 +18,36 @@ div.content{
     }
   }
  
+
+@media only screen and (max-width: 1000px) {
+  div.content pre{
+    font-size: 15px;
+    overflow: scroll;
+  }
+}
+div.content h2{
+    margin: 30px 10px;
+}
+div.content h3{
+  margin: 20px 10px;
+}
 div.content p{
-    
+  margin: 10px 10px;
+  padding: 10px 10px;
+}
+
+div.content a{
+  text-decoration: none;
+  color: rgba(122, 50, 139, 0.7);
+}
+div.content a:hover{
+  text-decoration: underline;
+}
+div.content a:active{
+  text-decoration: underline;
+  background-color: rgba(206, 145, 221, 0.6);
+}
+div.content a:visited{
+  text-decoration: none;
+  color: rgba(122, 50, 139, 0.7);
 }

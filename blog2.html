@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+    <head>
+      <meta charset="utf-8">
+      <link href="styles/navigation.css" rel="stylesheet">
+      <link href="styles/index.css" rel="stylesheet">
+      <link href="styles/blog.css" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,300&family=Roboto+Mono:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,300&family=Press+Start+2P&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+      <title>Ritika's Blog</title>
+      <meta name="author" content="Ritika Radhakrishnan">
+      <meta name="description" content="My blog">
+      <link rel="icon" href="images/favicon_io_home/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <ul class="mynav">
+            <li><a href="index.html">home.&nbsp;</a></li>
+            <li><a href="#">website.&nbsp;</a></li>
+          </ul>
+          <div class="content">
+          <h2>The explict 'self' in a Python class.</h2>
+          <p><em>British people be like: It’s an initializer, __innit__?</em></p>
+          <p>In Python, whenever we create a function inside a class i.e. a method, we used the ‘self’ keyword as the first parameter in each case.</p>
+          <h3>A quick look at _innnit_ first:</h3>
+          <pre class="brush: python">
+            <!--code Tag starts here -->
+            <code>
+    #Creating the constructor method inside the class Person
+    def __innit__(self, name, age, profession): 
+      self.age = age
+      self.name = name
+      self.profession = profession
+
+    # Creating Objects 
+    Person1 = Person(“Saul Goodman”, 45, “lawyer”)
+    Person2 = Person(“Kim Wexler”, 40, “lawyer”)
+          <!--code Tag ends here -->
+            </code>
+        </pre>
+          <p>Here, we create initalize the objects using __innit__ and define the variables, later we create the two instances of the class i.e. the objects - ‘Person1’ and ‘Person2’. </p>
+          <p>The arguments of the objects are according to the number of parameters in the constructor. In our case, apart from self, there are three parameters in our constructor - name, age and profession hence we give - “Saul Goodman”, 45, “lawyer” as the arguments to the object.</p>
+          <p> In conclusion, __innit__ will act like a blueprint for the class ‘Person’.</p>
+          <h3>About the ‘self’ keyword</h3>
+          <p>In the example below let’s create a Person who has a name, age and profession.</p>
+          <pre>
+            <!--code Tag starts here -->
+            <code>
+    class Person
+      def __innit__(self, name, age, profession): 
+        self.age = age  #Add a variable that has the same value as 'age'.
+        self.name = name
+        self.profession = profession
+
+      def printThis(self):
+        print(Hey! I am “{self.name}“, I am a “{self.profession}”)
+
+    Person1 = Person(“Saul Goodman”, 45, “lawyer”)
+
+    #Output:
+    >>> Hey! I am Saul Goodman, I am a lawyer
+                <!--code Tag ends here -->
+            </code>
+        </pre>
+          <p>Here, in the Constructor if ‘self’ was absent we could have used the three parameters only within __innit__ method. When we attach it to ‘self’, we can use all over the class, hence, we can use the variable ‘name’ from the __innit__ method in the printThis() method.</p>
+          <p>So, ‘self’ is the class itself. Whenever we refer to ‘self’ we are referring the variables in the class. Example - when we say self.name we are actually reffering to class.name</p>
+          <p>In our example, self.name and name are NOT the same! Instance attributes are defined in the constructor, ’self.name’ is the instance attribute whereas name is the local variable. </p>
+          <h3>About the __call__ function</h3>
+          <p>We can also use the __call__  function that will create an in-built function inside the class, so we don’t need to create a function ‘printThis()’ of our own.</p>
+          <pre>
+            <!--code Tag starts here -->
+            <code>
+    class Person
+        def __innit__(self, name, age, profession): 
+            self.age = age
+            self.name = name
+            self.profession = profession
+
+        def __call__(self):
+            print((Hey! I am “{self.name}“, I am a “{self.profession}”)) 
+
+    Person1 = Person(“Saul Goodman”, 45, “lawyer”)
+    Person1()
+
+    #Output:
+
+    >>> Hey! I am Saul Goodman, I am a lawyer
+                <!--code Tag ends here -->
+            </code>
+        </pre>
+          <p>Here, instead of creating a function called printThis() we use make use of __call__ function. It helps us to treat objects as function. In our case, the object - Person1 is treated called as a function - Person()</p>
+          <h3>More about self:</h3>
+          <p>Unlike ‘this’ in Java and C++, ‘self’ is NOT a keyword in python. Infact, you could replace the word self with any non-keyword name you’d use for a variable. Using ’self’ helps to does make it easier to distinguish it from local variables.</p>
+          <p>Read more from the creator of Python:<a href="https://neopythonic.blogspot.com/2008/10/why-explicit-self-has-to-stay.html" target="_blank"> why the explicit self has to stay.</a></p>
+            <ul class="mynav">
+                <li><a href="index.html">home.&nbsp;</a></li>
+            </ul>
+          </div>
+    </body>
+  </html>
