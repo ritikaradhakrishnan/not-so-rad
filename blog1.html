@@ -15,6 +15,7 @@
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
       <link rel="manifest" href="/site.webmanifest">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <ul class="mynav">
@@ -22,7 +23,7 @@
             <li><a href="#">website.&nbsp;</a></li>
           </ul>
           <div class="content">
-          <h2>The explict 'self' in a Python class.</h2>
+          <h2>The explicit 'self' in a Python class.</h2>
           <p><em>British people be like: It’s an initializer, __innit__?</em></p>
           <p>In Python, whenever we create a function inside a class i.e. a method, we used the ‘self’ keyword as the first parameter in each case.</p>
           <h3>A quick look at _innnit_ first:</h3>
@@ -41,7 +42,7 @@
           <!--code Tag ends here -->
             </code>
         </pre>
-          <p>Here, we create initalize the objects using __innit__ and define the variables, later we create the two instances of the class i.e. the objects - ‘Person1’ and ‘Person2’. </p>
+          <p>Here, we initalize the objects using __innit__ and define the variables, later we create the two instances of the class i.e. the objects - ‘Person1’ and ‘Person2’. </p>
           <p>The arguments of the objects are according to the number of parameters in the constructor. In our case, apart from self, there are three parameters in our constructor - name, age and profession hence we give - “Saul Goodman”, 45, “lawyer” as the arguments to the object.</p>
           <p> In conclusion, __innit__ will act like a blueprint for the class ‘Person’.</p>
           <h3>About the ‘self’ keyword</h3>
@@ -65,8 +66,8 @@
                 <!--code Tag ends here -->
             </code>
         </pre>
-          <p>Here, in the Constructor if ‘self’ was absent we could have used the three parameters only within __innit__ method. When we attach it to ‘self’, we can use all over the class, hence, we can use the variable ‘name’ from the __innit__ method in the printThis() method.</p>
-          <p>So, ‘self’ is the class itself. Whenever we refer to ‘self’ we are referring the variables in the class. Example - when we say self.name we are actually reffering to class.name</p>
+          <p>Here, in the constructor, if ‘self’ was absent we could have used the three parameters only within the __innit__ method. When we attach it to ‘self’, we can use it all over the class, hence, we can use the variable ‘name’ from the __innit__ method in the printThis() method.</p>
+          <p>So, ‘self’ is the class itself. Whenever we refer to ‘self’ we are referring to the variables in the class. Example - when we say self.name we are actually referring to class.name</p>
           <p>In our example, self.name and name are NOT the same! Instance attributes are defined in the constructor, ’self.name’ is the instance attribute whereas name is the local variable. </p>
           <h3>About the __call__ function</h3>
           <p>We can also use the __call__  function that will create an in-built function inside the class, so we don’t need to create a function ‘printThis()’ of our own.</p>
@@ -91,9 +92,9 @@
                 <!--code Tag ends here -->
             </code>
         </pre>
-          <p>Here, instead of creating a function called printThis() we use make use of __call__ function. It helps us to treat objects as function. In our case, the object - Person1 is treated called as a function - Person()</p>
+          <p>Here, instead of creating a function called printThis() we use the __call__ function. It helps us to treat object as function. In our case, the object - Person1 is treated called as a function - Person()</p>
           <h3>More about self:</h3>
-          <p>Unlike ‘this’ in Java and C++, ‘self’ is NOT a keyword in python. Infact, you could replace the word self with any non-keyword name you’d use for a variable. Using ’self’ helps to does make it easier to distinguish it from local variables.</p>
+          <p>Unlike ‘this’ in Java and C++, ‘self’ is NOT a keyword in python. In fact, you could replace the word self with any non-keyword name you’d use for a variable. Using ’self’ does make it easier to distinguish it from local variables.</p>
           <p>Read more from the creator of Python:<a href="https://neopythonic.blogspot.com/2008/10/why-explicit-self-has-to-stay.html" target="_blank"> why the explicit self has to stay.</a></p>
             <ul class="mynav">
                 <li><a href="index.html">home.&nbsp;</a></li>
